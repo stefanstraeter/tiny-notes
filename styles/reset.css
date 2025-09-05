@@ -1,0 +1,104 @@
+/* APPLY BOX-SIZING RULE TO ALL ELEMENTS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* REMOVE DEFAULT MARGIN */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* REMOVE LIST STYLES AND MARGIN FOR NORMAL LISTS AND LISTS WITH ROLE ATTRIBUTE */
+ul,
+ol,
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* BASICS BODY SETTINGS */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* MAKE IMAGES EASIER TO HANDEL */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* ENSURE FONT INHERITANCE FOR FORM ELEMENTS */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* SET CURSOR FOR CLICKABLE ELEMENTS ONLY */
+button,
+select,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  cursor: pointer;
+}
+
+/* IMPROVE TEXT WRAPPING FOR HEADINGS AND PARAGRAPHS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  overflow-wrap: break-word;
+}
+
+/* ENABLE SMOOTH SCROLLING BY DEFAULT */
+html {
+  scroll-behavior: smooth;
+}
+
+/* RESET LINKS  */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* REMOVE ANIMATIONS FOR USERS WHO PREFER REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

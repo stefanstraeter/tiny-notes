@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Your digital desk</title>
+
+    <script src="./scripts/templates.js"></script>
+    <script src="./script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body onload="init()">
+    <header class="header-wrapper">
+      <h1>Your digital desk</h1>
+      <h2>Capture notes, check off tasks & archive what matters.</h2>
+    </header>
+
+    <main class="section-wrapper">
+      <section class="input-section">
+        <form class="input-section" onsubmit="addNote(); return false;">
+          <input id="titleInput" type="text" placeholder="Title…" required />
+          <input id="noteInput" type="text" placeholder="What to do…" required />
+          <button class="btn-safe" type="submit">Let's go!</button>
+        </form>
+      </section>
+
+      <section class="notes mt-8 min-hgt-18" aria-labelledby="notes-heading">
+        <h3>Notes</h3>
+        <div id="notes-content" class="grid-ctn"></div>
+      </section>
+
+      <section class="archive mt-8 min-hgt-18" aria-labelledby="archive-heading">
+        <h3>Archive</h3>
+        <div id="archive-content" class="grid-ctn"></div>
+      </section>
+
+      <section class="trash mt-8 min-hgt-18" aria-labelledby="trash-heading">
+        <h3>Trash</h3>
+        <div id="trash-content" class="grid-ctn"></div>
+      </section>
+    </main>
+  </body>
+</html>
