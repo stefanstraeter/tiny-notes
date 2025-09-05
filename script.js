@@ -183,7 +183,9 @@ function trashToNote(indexNote) {
 
 
 function deleteNote(indexTrashNote) {
+    trashNotesTitles.splice(indexTrashNote, 1);
     trashNotes.splice(indexTrashNote, 1);
+
 
     saveToLocalStorage();
     renderNotes();

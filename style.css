@@ -94,7 +94,7 @@ header {
   margin-top: 1rem;
 }
 
-@media (max-width: 55rem) {
+@media (max-width: 65rem) {
   .grid-ctn {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -157,7 +157,7 @@ input::placeholder {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .close-btn {
